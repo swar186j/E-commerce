@@ -1,0 +1,145 @@
+
+
+{% extends "index.html" %}
+
+
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Locate Us</title>
+
+    <style>
+
+        p {
+
+            color: #0f0f0f;
+
+            margin-bottom: 10px;
+
+            text-align: center;
+
+        }
+
+        .map {
+
+            width: 100%;
+
+            max-width: 600px;
+
+            display: block;
+
+            margin: 20px auto;
+
+        }
+
+        .contact-info {
+
+            margin-top: 20px;
+
+            text-align: center;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 style="text-align: center;">Visit Our Office</h1>
+
+        <p>We are located at:</p>
+
+        <p>123 Main Street, City, Country</p>
+
+        <p>Navigate us: <a href="https://maps.app.goo.gl/bTCLBQsvySPDAcRRA"> Plant'em</a> </p>
+
+        
+
+        <img src="./static/images/locate_us.jpeg" alt="Map" class="map">
+
+        
+
+        <div class="contact-info">
+
+            <p>Email: example@example.com</p>
+
+            <p>Phone: +1234567890</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="contact-page">
+
+        <h1>Contact Us</h1>
+
+    
+
+        <p>Fill out the form below to get in touch with us.</p>
+
+    
+
+        <form>
+
+            <label for="name">Name:</label>
+
+            <input type="text" id="name" name="name">
+
+    
+
+            <label for="email">Email:</label>
+
+            <input type="email" id="email" name="email">
+
+    
+
+            <label for="message">Message:</label>
+
+            <textarea id="message" name="message"></textarea>
+
+    
+
+            <input type="submit" value="Send">
+
+        </form>
+
+    
+
+        <p>You can also reach us at:</p>
+
+    
+
+        <p>
+
+            Phone: 555-123-4567<br>
+
+            Email: info@myecommercestore.com
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>
+
+{% endblock %}
