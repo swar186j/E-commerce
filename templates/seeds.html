@@ -1,0 +1,531 @@
+<!-- indoor.html -->
+
+{% extends "index.html" %}
+
+
+
+{% block content %}
+
+
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indoor.css') }}">
+
+</head>
+
+
+
+<body>
+
+    <h1>Welcome to Our Seeds Collection</h1>
+
+
+
+    <!-- Seed1 -->
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed1" class="plant-img">
+
+        <h2 class="plant-name">Seed 1</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 10</p>
+
+        <div class="description-overlay" id="description-overlay1">
+
+            <div class="description">
+
+                <p>Description of Seed1...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 1">
+
+                        <input type="hidden" name="price" value="10">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed1',10)">
+
+                    </form>
+
+                    <!-- <button class="button" onclick="addToCart('plant1')">Add to Cart</button> -->
+
+                    <button class="button" onclick="toggleDescription('description-overlay1')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay1')">View</button>
+
+    </div>
+
+
+
+    <!-- Seed2 -->
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed2" class="plant-img">
+
+        <h2 class="plant-name">Seed 2</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 15</p>
+
+        <div class="description-overlay" id="description-overlay2">
+
+            <div class="description">
+
+                <p>Description of Seed2...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 2">
+
+                        <input type="hidden" name="price" value="15">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed2',15)">
+
+                    </form>
+
+                    <button class="button" onclick="toggleDescription('description-overlay2')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay2')">View</button>
+
+    </div>
+
+
+
+    <!-- Seed3 -->
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed3" class="plant-img">
+
+        <h2 class="plant-name">Seed 3</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 20</p>
+
+        <div class="description-overlay" id="description-overlay3">
+
+            <div class="description">
+
+                <p>Description of Seed3...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 3">
+
+                        <input type="hidden" name="price" value="20">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed3',20)">
+
+                    </form>
+
+                    <button class="button" onclick="toggleDescription('description-overlay3')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay3')">View</button>
+
+    </div>
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed3" class="plant-img">
+
+        <h2 class="plant-name">Seed 4</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 25</p>
+
+        <div class="description-overlay" id="description-overlay3">
+
+            <div class="description">
+
+                <p>Description of Seed4...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 4">
+
+                        <input type="hidden" name="price" value="25">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed4',25)">
+
+                    </form>
+
+                    <button class="button" onclick="toggleDescription('description-overlay4')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay4')">View</button>
+
+    </div>
+
+    <!-- Add more Seedcontainers as needed -->
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed3" class="plant-img">
+
+        <h2 class="plant-name">Seed 5</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 30</p>
+
+        <div class="description-overlay" id="description-overlay5">
+
+            <div class="description">
+
+                <p>Description of Seed5...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 5">
+
+                        <input type="hidden" name="price" value="30">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed5',30)">
+
+                    </form>
+
+                    <button class="button" onclick="toggleDescription('description-overlay5')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay5')">View</button>
+
+    </div>
+
+    <!-- Seed1 -->
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed1" class="plant-img">
+
+        <h2 class="plant-name">Seed 6</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 35</p>
+
+        <div class="description-overlay" id="description-overlay6">
+
+            <div class="description">
+
+                <p>Description of Seed6...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 1">
+
+                        <input type="hidden" name="price" value="35">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed6',35)">
+
+                    </form>
+
+                    <!-- <button class="button" onclick="addToCart('plant1')">Add to Cart</button> -->
+
+                    <button class="button" onclick="toggleDescription('description-overlay6')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay6')">View</button>
+
+    </div>
+
+
+
+    <!-- Seed2 -->
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed2" class="plant-img">
+
+        <h2 class="plant-name">Seed 7</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 40</p>
+
+        <div class="description-overlay" id="description-overlay2">
+
+            <div class="description">
+
+                <p>Description of Seed7...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 7">
+
+                        <input type="hidden" name="price" value="40">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed7',40)">
+
+                    </form>
+
+                    <button class="button" onclick="toggleDescription('description-overlay7')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay7')">View</button>
+
+    </div>
+
+
+
+    <!-- Seed3 -->
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed3" class="plant-img">
+
+        <h2 class="plant-name">Seed 8</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 45</p>
+
+        <div class="description-overlay" id="description-overlay3">
+
+            <div class="description">
+
+                <p>Description of Seed8...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 8">
+
+                        <input type="hidden" name="price" value="45">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed8',45)">
+
+                    </form>
+
+                    <button class="button" onclick="toggleDescription('description-overlay8')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay8')">View</button>
+
+    </div>
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed3" class="plant-img">
+
+        <h2 class="plant-name">Seed 9</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 50</p>
+
+        <div class="description-overlay" id="description-overlay9">
+
+            <div class="description">
+
+                <p>Description of Seed9...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 9">
+
+                        <input type="hidden" name="price" value="50">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed9',50)">
+
+                    </form>
+
+                    <button class="button" onclick="toggleDescription('description-overlay9')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay9')">View</button>
+
+    </div>
+
+    <!-- Add more Seedcontainers as needed -->
+
+    <div class="plant-container">
+
+        <!-- Seedcontent here -->
+
+        <img src="https://www.anneofgreengardens.com/wp-content/uploads/2015/08/Seeds-Anne-of-Green-Gardens.jpg"
+
+            alt="seed3" class="plant-img">
+
+        <h2 class="plant-name">Seed 10</h2>
+
+        <p class="plant-price" style="text-align: center;">Price: $ 55</p>
+
+        <div class="description-overlay" id="description-overlay10">
+
+            <div class="description">
+
+                <p>Description of Seed10...</p>
+
+                <div class="button-container">
+
+                    <form action="/add_to_cart" method="post">
+
+                        <input type="hidden" name="plant_name" value="Seed 10">
+
+                        <input type="hidden" name="price" value="55">
+
+                        <input type="submit" value="Add to Cart" class="button" onclick="addToCart('seed10',55)">
+
+                    </form>
+
+                    <button class="button" onclick="toggleDescription('description-overlay10')">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button view-button" style="margin-left: 85px;"
+
+            onclick="toggleDescription('description-overlay10')">View</button>
+
+    </div>
+
+
+
+    <script>
+
+        function toggleDescription(descriptionId) {
+
+            const descriptionOverlay = document.getElementById(descriptionId);
+
+            descriptionOverlay.style.display = descriptionOverlay.style.display === "none" ? "flex" : "none";
+
+        }
+
+
+
+        // Initialize an empty array to store cart items
+
+        var cartItems = [];
+
+
+
+        // Function to add product to cart
+
+        function addToCart(plantName, price) {
+
+            // Add the product to the cartItems array
+
+            cartItems.push({ name: plantName, price: price });
+
+            alert('Added ' + plantName + ' to cart.');
+
+        }
+
+    </script>
+
+
+
+</body>
+
+{% endblock %}
