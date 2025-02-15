@@ -1,0 +1,74 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+
+<head>
+
+  <title>Shopping Cart</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}">
+
+</head>
+
+<body>
+
+  <h1>Shopping Cart</h1>
+
+  <div class="cart-items">
+
+      <table>
+
+          <thead>
+
+              <tr>
+
+                  <th>Product Name</th>
+
+                  <th>Price</th>
+
+              </tr>
+
+          </thead>
+
+          <tbody>
+
+              {% for item in cartItems %}
+
+              <tr>
+
+                  <td>{{ item.plant_name }}</td>
+
+                  <td>${{ item.price }}</td>
+
+              </tr>
+
+              {% endfor %}
+
+          </tbody>
+
+      </table>
+
+      <div class="total-price">
+
+          <p>Total Price: ${{ total_price }}</p>
+
+      </div>
+
+  </div>
+
+  <div class="checkout-button">
+
+      <a href="/checkout">Checkout</a>
+
+  </div>
+
+  </body>
+
+
+
+  {% endblock %}
+
+
+
