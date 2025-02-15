@@ -1,181 +1,85 @@
 {% extends "index.html" %}
-
-
-
 {% block content %}
-
-
-
 <style>
-
     /* Add styles for the product creation form */
+    /* Container styles */
+    /* Form styles */
+    /* CSS for the form container */
+    .form-container {
+        max-width: 600px;
+        flex: 1;
+        height: 350px;
+        margin: 50px auto;
+        /* Adjust margin to center vertically */
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-/* Container styles */
+    /* Form styles */
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+    }
 
-/* Form styles */
+    .form-container label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
 
+    .form-container input[type="text"],
+    .form-container input[type="number"],
+    .form-container input[type="file"] {
+        width: 100%;
+        padding: 4px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
 
+    .form-container button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
-/* CSS for the form container */
-
-.form-container {
-
-    max-width: 600px;
-
-    flex: 1;
-
-    height: 350px;
-
-    margin: 50px auto; /* Adjust margin to center vertically */
-
-    padding: 20px;
-
-    background-color: #f9f9f9;
-
-    border-radius: 5px;
-
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-}
-
-
-
-/* Form styles */
-
-.form-container form {
-
-    display: flex;
-
-    flex-direction: column;
-
-}
-
-
-
-.form-container label {
-
-    margin-bottom: 5px;
-
-    font-weight: bold;
-
-}
-
-
-
-.form-container input[type="text"],
-
-.form-container input[type="number"],
-
-.form-container input[type="file"] {
-
-    width: 100%;
-
-    padding: 4px;
-
-    margin-bottom: 10px;
-
-    border: 1px solid #ccc;
-
-    border-radius: 4px;
-
-}
-
-
-
-.form-container button[type="submit"] {
-
-    background-color: #4CAF50;
-
-    color: white;
-
-    padding: 10px 20px;
-
-    border: none;
-
-    border-radius: 4px;
-
-    cursor: pointer;
-
-}
-
-
-
-.form-container button[type="submit"]:hover {
-
-    background-color: #45a049;
-
-}
-
-
-
-  
-
+    .form-container button[type="submit"]:hover {
+        background-color: #45a049;
+    }
 </style>
 
 <body>
-
-
-
     <div class="form-container">
-
         <h2>Add a New Product</h2>
-
-
-
-  <form action="/add_product" **method="POST"** enctype="multipart/form-data">
-
-    <div class="form-group">
-
-    <label for="name">Product Name:</label>
-
-    <input type="text" name="name" id="name" required>
-
+        <form action="/add_product" **method="POST" ** enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Product Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" name="price" id="price" step="0.01" required> (e.g., 19.99)
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="image">Product Image (Optional):</label>
+                <input type="file" name="image" id="image" accept="image/*">
+                <div class="form-group">
+                    <br>
+                    <button type="submit" onclick="addToCart(document.getElementById('name').value)">Add
+                        Product</button>
+        </form>
     </div>
-
-    <br>
-
-    <div class="form-group">
-
-    <label for="price">Price:</label>
-
-    <input type="number" name="price" id="price" step="0.01" required> (e.g., 19.99)
-
-    </div>
-
-    <br>
-
-    <div class="form-group">
-
-    <label for="image">Product Image (Optional):</label>
-
-    <input type="file" name="image" id="image" accept="image/*">
-
-    <div class="form-group">
-
-    <br>
-
-
-
-    <button type="submit" onclick="addToCart(document.getElementById('name').value)">Add Product</button>
-
-  </form>
-
-  </div>
-
 </body>
-
 <script>
-
-
-
     function addToCart(plantName) {
-
         // Implement add to cart functionality here
-
         alert('Added ' + plantName + ' to the database!');
-
     }
-
 </script>
-
 {% endblock %}

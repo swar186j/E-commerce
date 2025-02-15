@@ -1,25 +1,9 @@
 {% extends "index.html" %}
-
-
-
 {% block content %}
-
-
-
 <h1>Search Results</h1>
-
-
-
 {% if searchquery %}
-
 <p>You searched for: {{ searchquery }}</p>
-
 {% else %}
-
 <p>You did not provide a search query.</p>
-
 {% endif %}
-
-
-
 {% endblock %}

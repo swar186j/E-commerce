@@ -1,51 +1,27 @@
 {% extends "index.html" %}
-
-
-
 {% block content %}
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login OTP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}">
+</head>
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Login OTP</title>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}">
-
-  </head>
-
-  <body>
-
-    <div class="container">
-
-      <h1>Verify OTP</h1>
-
-      <p>An OTP has been sent to your mobile number {{ uname }}. Please enter it below to complete your login</p>
-
-        {% if error %}
-
-        <p class="error">{{ error }}</p>
-
-      {% endif %}
-
-      <form action="/" method="GET">
-
-        <div class="form-group">
-
-          <label for="otp">OTP:</label>
-
-          <input type="text" id="otp" name="otp" maxlength="6" required>
-
-        </div>
-
-        <button type="submit">Verify OTP</button>
-
-      </form>
-
-    </div>
-
-  </body>
-
-  {% endblock %}
+<body>
+  <div class="container">
+    <h1>Verify OTP</h1>
+    <p>An OTP has been sent to your mobile number {{ uname }}. Please enter it below to complete your login</p>
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+    <form action="/" method="GET">
+      <div class="form-group">
+        <label for="otp">OTP:</label>
+        <input type="text" id="otp" name="otp" maxlength="6" required>
+      </div>
+      <button type="submit">Verify OTP</button>
+    </form>
+  </div>
+</body>
+{% endblock %}
