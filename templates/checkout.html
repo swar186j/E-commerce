@@ -1,0 +1,60 @@
+<!-- checkout.html -->
+
+{% extends "index.html" %}
+
+
+
+{% block content %}
+
+<head>
+
+  <title>Checkout</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}">
+
+</head>
+
+<body>
+
+  <h1>Checkout</h1>
+
+  <div class="checkout-info">
+
+    <p>Total Amount: ${{ total_price }}</p>
+
+  </div>
+
+  <div class="payment-button">
+
+    <form action="/payment" method="POST">
+
+        <button class="pay" type="submit" onclick="pay()">Pay</button>
+
+    </form>
+
+</div>
+
+</body>
+
+
+
+
+
+
+
+<script>
+
+  function pay() {
+
+    // Simulate payment process (replace with actual payment logic)
+
+    alert("Payment successful!");
+
+    // Clear cart and redirect to home page
+
+  }
+
+</script>
+
+{% endblock %}
+
