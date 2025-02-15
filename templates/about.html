@@ -1,0 +1,213 @@
+{% extends 'index.html' %}
+
+
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Your Ecommerce Store Name - Home</title>
+
+  <style>
+
+
+
+.imag ul {
+
+  list-style: none; /* Remove default list styling */
+
+  display: flex; /* Use flexbox to arrange list items in a row */
+
+}
+
+
+
+.imag li {
+
+  margin-right: 20px; /* Add some spacing between list items */
+
+}
+
+
+
+.imag li:last-child {
+
+  margin-right: 0; /* Remove margin from the last list item */
+
+}
+
+
+
+.imag li div {
+
+  text-align: center; /* Center the content inside each list item */
+
+}
+
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="about-section" style="margin-left: 100px; margin-right: 100px;">
+
+    <header class="hero">
+
+        <img src="https://img.freepik.com/free-psd/banner-template-with-hands-holding-plant-soil_23-2148413531.jpg" alt="Hero banner image">
+
+        <h1>Your Catchy Headline</h1>
+
+        <p>Your Subheading - What makes your store unique?</p>
+
+        <a href="/home">Shop Now</a>
+
+      </header>
+
+    
+
+      <section class="categories">
+
+        <h2>Explore Our Categories</h2>
+
+        <ul>
+
+          <li><a href="/indoor">Indoor plants </a></li>
+
+          <li><a href="/outdoor">Outdoor plants </a></li>
+
+         <li><a href="/seeds">Seeds</a></li>
+
+      
+
+        </ul>
+
+      </section>
+
+    
+
+      <section class="featured-products">
+
+        <h2>Featured Products</h2><br><br>
+
+        <div class="imag">
+
+        <ul>
+
+          <li>
+
+              <div>
+
+              <img src="./static/images/plant.jpg" style="width: 70%;" alt="Product 1 image">
+
+              <p>Product 1 Name</p>
+
+              <span class="price">$ 99.99</span>
+
+            </div>
+
+          </li>
+
+          <li>
+
+              <div>
+
+              <img src="./static/images/plant2.jpg" style="width: 60%;"  alt="Product 2 image">
+
+              <p>Product 2 Name</p>
+
+              <span class="price">$ 24.99</span>
+
+            </div>
+
+          </li>
+
+
+
+          <li>
+
+            <div>
+
+              <img src="./static/images/plant1.jpg" style="width: 35%;"  alt="Product 3 image">
+
+              <p>Product 3 Name</p>
+
+              <span class="price">$ 49.99</span>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+      </section>
+
+    
+
+      <section class="testimonials">
+
+        <h2>Customer Testimonials</h2>
+
+        <p>"This product is amazing! It completely exceeded my expectations."</p>
+
+        <p>"I'm so happy I found this store. They have a great selection and fantastic customer service."</p>
+
+      </section>
+
+    
+
+      <section class="cta">
+
+        <h3>Sign Up for Exclusive Offers!</h3>
+
+        <form action="#">
+
+          <input type="email" placeholder="Enter your email">
+
+          <button type="submit">Subscribe</button>
+
+        </form>
+
+      </section>
+
+    
+
+  
+
+<h1>About Plant'em: Online Plant Delivery Service</h1>
+
+<p>Welcome to our online plant delivery service, where nature meets convenience! We are committed to providing you with an exceptional shopping experience, offering a wide range of quality plants at affordable prices, all while delivering excellent customer service.</p>
+
+<p>Our journey began in [year] when [founder name(s)] envisioned bringing the beauty of nature directly to your doorstep. From humble beginnings in a small office, we've blossomed into one of the leading online destinations for plant enthusiasts.</p>
+
+<p>At our core is a passionate team dedicated to curating a diverse selection of plants, ensuring you have access to the latest trends and the best deals. Our customer service team is here for you 24/7, ready to assist with any inquiries and guarantee your satisfaction.</p>
+
+<p>We've cultivated partnerships with trusted growers and suppliers to source only the finest plants and materials. Whether you're looking for lush greenery, vibrant flowers, or low-maintenance succulents, we strive to deliver unbeatable value across our entire collection.</p>
+
+<p>Shopping with us is a breeze, thanks to our user-friendly website and mobile apps. Plus, enjoy free shipping on orders over $[amount] and hassle-free returns on eligible items, making your plant-buying experience even more delightful.</p>
+
+<p>Thank you for choosing us to be your green companion. We're excited to embark on this botanical journey with you, helping you create a lush and vibrant oasis in your home or workspace.</p>
+
+</div>
+
+</body>
+
+{% endblock %}
+
+</html>
